@@ -28,6 +28,10 @@ app.get("/", (req, res) => {
   res.send("Hello Geeks");
 });
 
+app.listen(PORT, () => {
+    console.log(`Travel listening on port ${PORT}`)
+  })
+
 app.use("/api/hoteldata", hotelDataAddedToDBRouter);
 app.use("/api/categorydata", categoryDataAddedToDBRouter);
 app.use("/api/hotels", hotelRouter);
